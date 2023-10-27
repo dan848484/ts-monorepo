@@ -27,4 +27,4 @@ export const main = (input: string) => {
   }
 };
 
-// main(fs.readFileSync('/dev/stdin').toString());
+main(fs.readFileSync('/dev/stdin').toString());

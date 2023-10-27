@@ -2,6 +2,7 @@
   "name": "atcoder",
   "type": "module",
   "scripts": {
-    "execute": "ts-node --esm"
+    "execute": "ts-node --esm",
+    "watch": "nodemon",
   }
 }
