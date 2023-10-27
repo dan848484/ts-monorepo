@@ -3,6 +3,6 @@
   "type": "module",
   "scripts": {
     "execute": "ts-node --esm",
-    "watch": "nodemon",
+    "watch": "nodemon"
   }
 }
