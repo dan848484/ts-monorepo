@@ -10,7 +10,7 @@
       "defaultConfiguration": "production",
       "options": {
         "platform": "node",
-        "outputPath": "dist/apps/watcher",
+        "outputPath": "dist/apps/watcher/",
         "format": ["cjs"],
         "bundle": false,
         "main": "apps/watcher/src/main.ts",
@@ -36,12 +36,17 @@
         }
       }
     },
-    "serve": {
-      "executor": "@nx/js:node",
+    "start": {
+      "executor": "nx:run-commands",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "watcher:build"
+        "command": "node dist/apps/watcher/main.js"
       },
+      "dependsOn": [
+        {
+          "target": "build"
+        }
+      ],
       "configurations": {
         "development": {
           "buildTarget": "watcher:build:development"
