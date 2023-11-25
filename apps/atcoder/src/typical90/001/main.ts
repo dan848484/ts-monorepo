@@ -1,3 +1,5 @@
+import * as fs from 'fs';
+
 export function main(input: string) {
   const lines = input.split('\n');
   // let N = 0; //切れ込みの数
@@ -53,3 +55,5 @@ export function main(input: string) {
 
   console.log(left);
 }
+
+main(fs.readFileSync('/dev/stdin').toString());
