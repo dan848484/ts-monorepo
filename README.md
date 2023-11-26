@@ -15,3 +15,11 @@ TypeScript でサクっとコードを動かしたいときに使用する TypeS
 ```
 pnpm watch apps/atcoder/src/typical90/001/main.ts
 ```
+
+# AtCoder で問題を解く時
+
+scaffdog で雛形を生成することができます。
+
+```
+pnpm generate
+```
