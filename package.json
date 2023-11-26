@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "watch": "node dist/apps/watcher/main.js"
+    "watch": "node dist/apps/watcher/main.js",
+    "generate": "pnpm scaffdog generate"
   },
   "private": true,
   "dependencies": {
@@ -31,6 +32,7 @@
     "nx": "16.10.0",
     "nx-cloud": "latest",
     "prettier": "^2.6.2",
+    "scaffdog": "^3.0.0",
     "ts-jest": "^29.1.0",
     "ts-node": "10.9.1",
     "typescript": "~5.1.3"
