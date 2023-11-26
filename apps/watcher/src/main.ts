@@ -1,7 +1,6 @@
 import * as fs from 'fs';
 import { spawn } from 'child_process';
 
-const input = fs.readFileSync(process.cwd() + '/stdin.txt').toString();
 const targetFilePath = process.cwd() + '/' + process.argv[2];
 console.log('start watching...: ', targetFilePath);
 let lock = false;
@@ -12,6 +11,7 @@ const executeScript = () => {
   if (currentTime - lastExecutionTime < 2000 || lock) return;
   lock = true;
   console.log('-------------------');
+  const input = fs.readFileSync(process.cwd() + '/stdin.txt').toString();
   const proc = spawn(
     `echo "${input}" | ts-node -P ./tsconfig.base.json --esm ${targetFilePath} `,
     [],
