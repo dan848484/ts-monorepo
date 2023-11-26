@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "watch": "node dist/apps/watcher/main.js"
+    "watch": "node dist/apps/watcher/main.js",
+    "generate": "pnpm scaffdog generate"
   },
   "private": true,
   "dependencies": {
