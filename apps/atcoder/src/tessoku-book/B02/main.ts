@@ -8,7 +8,7 @@ export const main = (input: string) => {
   const [A, B] = lines[0].split(' ').map(Number);
   for (let i = A; i <= B; i++) {
     if (100 % i === 0) {
-      console.log('Yes', i);
+      console.log('Yes');
       return;
     }
   }
