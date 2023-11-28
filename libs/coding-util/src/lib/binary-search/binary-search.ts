@@ -1,7 +1,7 @@
 export const binarySearch = (
   array: number[],
   target: number,
-  sortCheck: boolean = false
+  sortCheck = false
 ) => {
   if (sortCheck) {
     let isSorted = true;
@@ -18,7 +18,7 @@ export const binarySearch = (
   let right = array.length - 1;
 
   while (right >= left) {
-    let middleIdx = Math.floor((right + left) / 2);
+    const middleIdx = Math.floor((right + left) / 2);
     if (target > array[middleIdx]) {
       left = middleIdx + 1;
     } else if (target < array[middleIdx]) {

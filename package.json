@@ -4,7 +4,8 @@
   "license": "MIT",
   "scripts": {
     "watch": "node dist/apps/watcher/main.js",
-    "generate": "pnpm scaffdog generate"
+    "generate": "pnpm scaffdog generate",
+    "test-jest": "NODE_OPTIONS='--experimental-vm-module'&& jest"
   },
   "private": true,
   "dependencies": {
