@@ -13,6 +13,7 @@ TypeScript でサクっとコードを動かしたいときに使用する TypeS
 (stdin.txt の内容が毎回、標準入力として与えられます。)
 
 ```
+pnpm watcher:build
 pnpm watch apps/atcoder/src/typical90/001/main.ts
 ```
 
