@@ -6,7 +6,7 @@ export const permutation = <T>(
   if (selected.length === k) {
     return [selected];
   }
-  let result = [];
+  let result: T[][] = [];
   for (let i = 0; i < options.length; i++) {
     const filteredOptions = options.filter((_, j) => i !== j);
     const selection = [...selected, options[i]];
