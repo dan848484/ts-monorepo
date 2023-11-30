@@ -5,10 +5,14 @@
   "scripts": {
     "watch": "node dist/apps/watcher/main.js",
     "generate": "pnpm scaffdog generate",
-    "test-jest": "NODE_OPTIONS='--experimental-vm-module'&& jest"
+    "test-jest": "NODE_OPTIONS='--experimental-vm-module'&& jest",
+    "watcher:build": "nx run watcher:build"
   },
   "private": true,
   "dependencies": {
+    "@babel/core": "^7.23.5",
+    "@babel/preset-env": "^7.23.5",
+    "@babel/preset-typescript": "^7.23.3",
     "axios": "^1.0.0",
     "nodemon": "^3.0.1",
     "tslib": "^2.3.0"
@@ -20,6 +24,7 @@
     "@nx/js": "16.10.0",
     "@nx/linter": "16.10.0",
     "@nx/node": "^16.10.0",
+    "@types/babel__core": "^7.20.5",
     "@types/jest": "^29.4.0",
     "@types/node": "18.7.1",
     "@typescript-eslint/eslint-plugin": "^5.60.1",
