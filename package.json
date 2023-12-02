@@ -6,6 +6,7 @@
     "watch": "node dist/apps/watcher/main.js",
     "generate": "pnpm scaffdog generate",
     "test-jest": "NODE_OPTIONS='--experimental-vm-module'&& jest",
+    "commit": "git-cz",
     "watcher:build": "nx run watcher:build"
   },
   "private": true,
@@ -14,6 +15,7 @@
     "@babel/preset-env": "^7.23.5",
     "@babel/preset-typescript": "^7.23.3",
     "axios": "^1.0.0",
+    "git-cz": "^4.9.0",
     "nodemon": "^3.0.1",
     "tslib": "^2.3.0"
   },
