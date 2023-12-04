@@ -12,6 +12,9 @@ import * as fs from 'fs';
  *
  * 実装にあたってはAはA2から始まること、BはB3から始まることに留意する必要があった。
  *
+ * Ai は部屋i-1から部屋iへ向かうのにかかる時間
+ * Bi は部屋i-2から部屋iへ向かうのにかかる時間
+ *
  * @param input
  */
 export const main = (input: string) => {
