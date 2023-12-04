@@ -6,11 +6,15 @@ import * as fs from 'fs';
  *
  * 部屋1から部屋nに移動するときにかかる時間をdpテーブルに格納する。
  *
+ * ある部屋iまで行く最短ルートは2つ考えられる
+ * 1. 部屋i-1まで移動した後部屋iへ移動
+ * 2. 部屋i-2まで移動した後部屋iへ移動
  *
+ * 実装にあたってはAはA2から始まること、BはB3から始まることに留意する必要があった。
  *
  * @param input
  */
-const main = (input: string) => {
+export const main = (input: string) => {
   const lines = input.split('\n');
   const N = Number(lines[0]);
   const A = lines[1].split(' ').map(Number);
