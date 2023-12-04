@@ -4,13 +4,20 @@ import * as fs from 'fs';
  *
  * https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_p
  *
- * 部屋1から部屋nに移動するときにかかる分数をdpテーブルに格納する。
+ * 部屋1から部屋nに移動するときにかかる時間をdpテーブルに格納する。
  *
+ * ある部屋iまで行く最短ルートは2つ考えられる
+ * 1. 部屋i-1まで移動した後部屋iへ移動
+ * 2. 部屋i-2まで移動した後部屋iへ移動
  *
+ * 実装にあたってはAはA2から始まること、BはB3から始まることに留意する必要があった。
+ *
+ * Ai は部屋i-1から部屋iへ向かうのにかかる時間
+ * Bi は部屋i-2から部屋iへ向かうのにかかる時間
  *
  * @param input
  */
-const main = (input: string) => {
+export const main = (input: string) => {
   const lines = input.split('\n');
   const N = Number(lines[0]);
   const A = lines[1].split(' ').map(Number);
