@@ -9,6 +9,19 @@ interface Route {
    */
   time: number;
 }
+
+/**
+ * https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_q
+ *
+ * 自分で考えた実装だが、大きな入力ではTLEになってしまう実装。
+ *
+ * A16ではdpテーブルに最短時間のみを格納していたが、Routeオブジェクトを格納するようにした。
+ *
+ * Routeオブジェクトにはたどった部屋の履歴、その部屋まで行くのにかかる時間を格納している。
+ *
+ *
+ * @param input
+ */
 const main = (input: string) => {
   const lines = input.split('\n');
   const N = Number(lines[0]);
