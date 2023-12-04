@@ -4,7 +4,7 @@ import * as fs from 'fs';
  *
  * https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_p
  *
- * 部屋1から部屋nに移動するときにかかる分数をdpテーブルに格納する。
+ * 部屋1から部屋nに移動するときにかかる時間をdpテーブルに格納する。
  *
  *
  *
