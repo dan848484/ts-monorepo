@@ -22,6 +22,16 @@ const main = (input: string) => {
   });
   dp[0][0] = 0; //品物0個で重さ制限0の時は0。
 
-  console.log(dp);
+  for (let i = 1; i < N + 1; i++) {
+    const w = weights[i - 1];
+    const v = values[i - 1];
+    for (let j = 0; j < W + 1; j++) {
+      const valueWithoutItem = dp[i - 1][j] ?? 0;
+      const valueWithItem = j - w >= 0 ? (dp[i - 1][j - w] ?? 0) + v : 0;
+      dp[i][j] = Math.max(valueWithoutItem, valueWithItem);
+    }
+  }
+
+  console.log(dp[N][W]);
 };
 main(fs.readFileSync('/dev/stdin').toString());
