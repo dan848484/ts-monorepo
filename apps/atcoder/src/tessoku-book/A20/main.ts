@@ -13,8 +13,16 @@ const main = (input: string) => {
   const lines = input.split('\n');
   const S = lines[0];
   const T = lines[1];
+  // 文字S * 文字T のマス目で考えていくが、0文字目を表現したいのでそれぞれ+1している。
   const rows = S.length + 1;
   const columns = T.length + 1;
+  /**
+   * dp[i][j] はi,jのマスに到達するまでに通る斜の辺の数。→ 最長共通部分列の長さ
+   *
+   * （Sの最初のi文字とTの最初のj文字における最長共通部分列の長さ）
+   *
+   * （S[i],T[j]の文字が等しければそのマスに斜めの線を引くことができる。）
+   */
   const dp = new Array(rows)
     .fill(undefined)
     .map((_) => new Array(columns).fill(0));
