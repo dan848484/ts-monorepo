@@ -7,7 +7,8 @@
     "generate": "pnpm scaffdog generate",
     "test-jest": "NODE_OPTIONS='--experimental-vm-module'&& jest",
     "commit": "git-cz",
-    "watcher:build": "nx run watcher:build"
+    "watcher:build": "nx run watcher:build",
+    "create-lib": "nx generate lib"
   },
   "private": true,
   "dependencies": {
