@@ -1,4 +1,12 @@
 import * as fs from 'fs';
+/**
+ * https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_u
+ * A21 Block Game
+ *
+ *
+ *
+ * @param input
+ */
 const main = (input: string) => {
   const lines = input.split('\n');
   const N = Number(lines[0]);
