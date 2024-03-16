@@ -15,7 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "coding-util": ["libs/coding-util/src/index.ts"]
+      "coding-util": ["libs/coding-util/src/index.ts"],
+      "insertion-sort": ["libs/insertion-sort/src/index.ts"],
+      "selection-sort": ["libs/selection-sort/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
